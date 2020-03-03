@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Open+Sans&display=swap');
+
+*{
+  box-sizing:border-box;  
+}
+
+body{
+  padding:0;
+  margin:0;
+  font-family:'Montserrat Alternates', sans-serif;
+  text-transform:uppercase;
+}
+
+.heading:first-child{
+  background:lavender;
+  font-size:35px;
+}
+
+.container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  max-width:1200px;
+  margin-bottom:100px;
+}
+
+.row{ /*This was the only part I was lost on at first. It's super important to create an inner wrapper so you can move between a grid and column layout*/
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+}
+
+.box{
+  padding:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  min-height:300px;
+  min-width:400px;
+}
+
+.heading{
+  min-height:100px;
+}
+
+.grey{
+  background:gainsboro;
+}
+
+.white{
+  background:ghostwhite;
+}
+
+.year{
+  font-size:50px;
+  color:lightgray;
+}
+
+.title{
+  position:absolute; /*I like the effect this causes but with more text, I would need to actually specify the location of the text*/
+  font-size:20px;
+}
+
+/*Images*/
+.image{
+  filter:grayscale(100%);
+  transition:filter ease-in-out 1s;
+}
+
+.image:hover{
+  filter:none;
+}
+
+.soldier{
+  background:url('http://1.bp.blogspot.com/-NB-FV_aV5ek/UNiCkFvTTdI/AAAAAAAAScA/axqXfqLR1fM/s1600/lee-pace---soldier%27s-girl---film-us---2003.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.fall{ background:url('https://i.pinimg.com/originals/7d/a1/de/7da1de761575512df57c3e6a27beaacb.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.daisies{ background:url('https://dvdbash.files.wordpress.com/2014/01/pushing-daisies-s2-lee-pace-11-dvdbash.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.hobbit{ 
+  background:url('http://directconversations.com/wp-content/uploads/2014/12/Lee-Pace-in-The-Hobbit-The-Battle-of-the-Five-Armies-photo-Warner-Bros.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.guardians{ background:url('https://i.ytimg.com/vi/NkvRNblURRU/maxresdefault.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.halt{ background:url('https://pmctvline2.files.wordpress.com/2017/06/halt-and-catch-fire-season-4-lee-pace.jpg?w=1024');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+footer{
+  font-family:'Montserrat Alternates', sans-serif;
+  display:flex;
+  padding:10px 0px 0px 0px;
+  font-size:14px;
+  align-items:center;
+  justify-content:space-around;
+  position:fixed;
+  bottom:0;
+  background-color:black;
+  color:white;
+  width:100vw;
+}
+
+footer > h2{
+  margin:0;
+  padding:0 10px;
+}
+
+#projectSrcBtn{
+  background:transparent;
+  color:white;
+  border-radius:20px;
+  text-decoration:none;
+  border:1px solid white;
+  padding:5px;
+  margin-bottom:10px;
+}
+
+@media (max-width: 400px){
+   footer{
+    display:block;
+  }
+  footer > h2{
+    font-size:1em;
+  }
+  #projectSrcBtn{
+    position:absolute;
+    top:5px;
+    font-size:0.5em;
+    right:20px;
+  }
+}
